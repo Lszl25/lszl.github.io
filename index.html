@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laszlito | Brand Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base styles inspired by laszlito.com */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.4;
+            color: #1c1c1c;
+            background-color: #ffffff;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Container styling */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header styling */
+        header {
+            padding: 2rem 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            mix-blend-mode: difference;
+        }
+        
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: white;
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        
+        /* Hero section styling */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 4rem;
+            background-color: #1c1c1c;
+            color: white;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5vw;
+            line-height: 1.1;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero-text {
+            font-size: 1.8vw;
+            line-height: 1.3;
+            margin-bottom: 3rem;
+            letter-spacing: -0.01em;
+            font-weight: 400;
+        }
+        
+        .brand-reference {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .superscript {
+            font-size: 0.6em;
+            vertical-align: super;
+            margin-left: 2px;
+        }
+        
+        /* CTA button */
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #1c1c1c;
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            background: #f0f0f0;
+        }
+        
+        /* Footer / Footnotes */
+        .footnotes {
+            padding: 3rem 0;
+            background: #ffffff;
+            color: #1c1c1c;
+            font-size: 0.9rem;
+            border-top: 1px solid #eaeaea;
+        }
+        
+        .footnote-item {
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+        
+        /* Cursor styling */
+        .custom-cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: difference;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s;
+            display: none;
+        }
+        
+        /* Animation for the paragraph */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animated-text {
+            opacity: 0;
+            animation: fadeIn 0.8s forwards;
+            animation-delay: 0.2s;
+        }
+        
+        .delay-1 {
+            animation-delay: 0.4s;
+        }
+        
+        .delay-2 {
+            animation-delay: 0.6s;
+        }
+        
+        .delay-3 {
+            animation-delay: 0.8s;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-text {
+                font-size: 1.2rem;
+            }
+        }
+        
+        /* For the split black/white effect */
+        .split-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #1c1c1c 65%, white 35%);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom cursor effect -->
+    <div class="custom-cursor"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">LASZLITO</a>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="split-background"></div>
+        <div class="hero-content">
+            <h1 class="animated-text">Brand-building that really sticks.</h1>
+            <p class="hero-text animated-text delay-1">
+                Hello there! I'm in the business of brand-building that really sticks. 
+                <span class="brand-reference">Wetransfer<span class="superscript">¹</span></span> rebranded in '16, is still as fresh as a daisy.
+            </p>
+            <p class="hero-text animated-text delay-2">
+                In '19 I bounced back to Barcelona, and gave <span class="brand-reference">Typeform<span class="superscript">²</span></span> a bold spin. 
+                Recently I just rekindled <span class="brand-reference">Monumental<span class="superscript">³</span></span> with a new name and fresh lick of paint.
+            </p>
+            <p class="hero-text animated-text delay-3" style="font-weight: 500;">Come on. Keep up!</p>
+            <div style="margin-top: 3rem;" class="animated-text delay-3">
+                <a href="#contact" class="cta-button">Let's talk branding</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footnotes -->
+    <section class="footnotes">
+        <div class="container">
+            <p class="footnote-item"><span class="superscript">¹</span> Wetransfer - File sharing service with a distinctive brand identity.</p>
+            <p class="footnote-item"><span class="superscript">²</span> Typeform - Online form builder known for conversational user experience.</p>
+            <p class="footnote-item"><span class="superscript">³</span> Monumental - Recently rebranded client with refreshed identity.</p>
+        </div>
+    </section>
+    
+    <!-- JavaScript for cursor effect -->
+    <script>
+        // Custom cursor effect
+        document.addEventListener('DOMContentLoaded', function() {
+            const cursor = document.querySelector('.custom-cursor');
+            
+            if (window.matchMedia("(min-width: 768px)").matches) {
+                cursor.style.display = 'block';
+                
+                document.addEventListener('mousemove', function(e) {
+                    cursor.style.left = e.clientX + 'px';
+                    cursor.style.top = e.clientY + 'px';
+                });
+                
+                document.addEventListener('mousedown', function() {
+                    cursor.style.width = '30px';
+                    cursor.style.height = '30px';
+                });
+                
+                document.addEventListener('mouseup', function() {
+                    cursor.style.width = '20px';
+                    cursor.style.height = '20px';
+                });
+                
+                // Enlarge cursor on interactive elements
+                const interactiveElements = document.querySelectorAll('a, button');
+                interactiveElements.forEach(function(element) {
+                    element.addEventListener('mouseenter', function() {
+                        cursor.style.width = '40px';
+                        cursor.style.height = '40px';
+                    });
+                    
+                    element.addEventListener('mouseleave', function() {
+                        cursor.style.width = '20px';
+                        cursor.style.height = '20px';
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
